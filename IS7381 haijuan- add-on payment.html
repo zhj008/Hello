@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOMO Order Confirmation</title>
+</head>
+<body style="margin:0;padding:0;font-family:'Roboto',Arial,sans-serif;line-height:1.6;color:#222222;height:100%;">
+    <!-- Main Container -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;margin:0 auto;background-color:#ffffff;">
+        <!-- Header -->
+        <tr>
+            <td style="background-color:#e5ff17;padding:20px 0;text-align:center;">
+                <img src="https://cdn2.singteldigital.com/content/dam/gomo/Promotions/2025-02/GOMO%205G%20Plus%20Logo.jpg" alt="GOMO Logo" width="81.74" height="32" style="width:81.74px;height:32px;">
+            </td>
+        </tr>
+        
+        <!-- Main Content -->
+        <tr>
+            <td style="padding:24px 40px;">
+                <h1 style="font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:32px;color:#242328;line-height:1.2;margin-bottom:24px;">Here's your order details</h1>
+                
+                <!-- Greeting Section -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="padding-bottom:4px;">
+                            <p style="font-weight:700;font-size:18px;margin-bottom:4px;margin-top:4px;">Hi ${CD@NickName},</p>
+                            <p style="margin-bottom:4px;margin-top:4px;">Here are your order details for mobile number <strong style="font-weight:700;">${EV@preaccNbr} ${EV@endaccNbr}</strong>.</p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Divider -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:8px;background-color:#f7f7f7;margin:24px 0;margin-bottom:16px;">
+                    <tr><td></td></tr>
+                </table>
+                
+                <!-- Order Details -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="padding-bottom:8px;">
+                            <h2 style="font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:24px;color:#242328;margin-bottom:8px;margin-top:8px;">Order #${EV@custOrderNbr}</h2>
+                            <p style="margin-bottom:4px;margin-top:4px;">GST Reg. no: ${EV@gstRegNo}</p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Divider -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:8px;background-color:#f7f7f7;margin:24px 0;margin-bottom:16px;">
+                    <tr><td></td></tr>
+                </table>
+                
+                <!-- Payment Method -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="padding-bottom:8px;">
+                            <h2 style="font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:24px;color:#242328;margin-bottom:8px;margin-top:8px;">Payment method</h2>
+                            <p style="margin-bottom:4px;margin-top:4px;">Card ending with [[${EV@paymentMethodList@voucher}]]</p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Divider -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:8px;background-color:#f7f7f7;margin:24px 0;margin-bottom:16px;">
+                    <tr><td></td></tr>
+                </table>
+                
+                <!-- Validity Period -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="padding-bottom:8px;">
+                            <h2 style="font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:24px;color:#242328;margin-bottom:8px;margin-top:8px;">Validity period</h2>
+                            <p style="margin-bottom:4px;margin-top:4px;">${EV@dpOfferOrderList@addOnEffDate}-${EV@dpOfferOrderList@addOnExpDate}</p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Divider -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:8px;background-color:#f7f7f7;margin:24px 0;margin-bottom:16px;">
+                    <tr><td></td></tr>
+                </table>
+                
+                <!-- Purchase Details -->
+                <h2 style="font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:24px;color:#242328;margin-bottom:8px;margin-top:8px;">Purchase details</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:24px;">
+                    <tr>
+                        <td style="padding-bottom:4px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>${EV@dpOfferOrderList@offerName}</td>
+                                    <td align="right">${CD@SGD}${EV@fmttotalOtcWithTax}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Divider -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:8px;background-color:#f7f7f7;margin:24px 0;margin-bottom:16px;">
+                    <tr><td></td></tr>
+                </table>
+                
+                <!-- Total Paid -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:24px;">
+                    <tr>
+                        <td style="padding-bottom:4px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td><strong style="font-weight:700;">Total paid</strong></td>
+                                    <td align="right">
+                                        <span style="font-family:'Poppins','Helvetica',sans-serif;font-weight:700;font-size:20px;margin-top:4px;margin-bottom:4px;">${CD@SGD}${EV@fmttotalOtcReceive}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td></td>
+                                    <td align="right">Includes GST</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Gray Background Divider -->
+        <tr>
+            <td style="background-color:#f7f7f7;height:8px;width:100%;margin-top:32px;margin-bottom:16px;"></td>
+        </tr>
+        
+        <!-- Support Section -->
+        <tr>
+            <td style="padding:0 30px 16px;">
+                <h2 style="font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:24px;color:#242328;margin-bottom:24px;">Hit a bump on the road?</h2>
+                
+                <!-- FAQ Link -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:16px;">
+                    <tr>
+                        <td>
+                            <a href="${CD@urlFAQ}" style="color:#4d28e8;text-decoration:underline;font-weight:700;">
+                                <img src="${CD@FAQ}" alt="FAQ Icon" width="24" height="24" style="vertical-align:middle;margin-right:8px;">
+                                <span style="vertical-align:middle;">Read full FAQ</span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Chat Link -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:16px;">
+                    <tr>
+                        <td>
+                            <a href="${CD@urlChat}" style="color:#4d28e8;text-decoration:underline;font-weight:700;">
+                                <img src="${CD@Zenmo}" alt="Chat Icon" width="24" height="24" style="vertical-align:middle;margin-right:8px;">
+                                <span style="vertical-align:middle;">Chat with us</span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- App Promotion Section -->
+        <tr>
+            <td style="background-color:#e5ff17;padding:40px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td valign="top">
+                            <h2 style="font-family:'Lato',Arial,sans-serif;font-weight:900;margin-bottom:8px;">Get ready to GOMO</h2>
+                            <p style="margin-bottom:16px;">Manage your services, check your usage and add more data on the go!</p>
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding-right:16px;">
+                                        <a href="${CD@urlAppStore}"><img src="${CD@Storebadges}" alt="App Store" width="120" height="40"></a>
+                                    </td>
+                                    <td>
+                                        <a href="${CD@urlGooglePlay}"><img src="${CD@GooglePay}" alt="Google Play" width="135" height="40"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" valign="top">
+                            <a href="${CD@urlGOMOapp}"><img src="${CD@Frame}" alt="GOMO App" width="200" height="317" style="width:200px;height:317px;"></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td style="background-color:#d5e516;padding:24px;">
+                <!-- Social Icons -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:16px;">
+                    <tr>
+                        <td>
+                            <a href="${CD@urlFacebook}" style="margin-right:16px;"><img src="${CD@Facebook}" alt="Facebook" width="24" height="24" style="width:24px;height:24px;"></a>
+                            <a href="${CD@urlInstagram}"><img src="${CD@Instagram}" alt="Instagram" width="24" height="24" style="width:24px;height:24px;"></a>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Footer Text -->
+                <p style="font-size:16px;color:#242328;margin:0;">
+                    GOMO service is provided by Singtel Mobile Singapore Pte Ltd.<br>
+                    © Singtel (${CD@CRN}). All rights reserved.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
